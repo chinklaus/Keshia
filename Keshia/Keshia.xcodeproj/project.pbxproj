@@ -10,6 +10,9 @@
 		401540192366D48C00598A2B /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540182366D48C00598A2B /* PersonDetail.swift */; };
 		4015401B2367131300598A2B /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4015401A2367131300598A2B /* Tutor.xcassets */; };
 		4015401D2367141A00598A2B /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015401C2367141A00598A2B /* PersonData.swift */; };
+		4015401F23671A8400598A2B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015401E23671A8400598A2B /* Home.swift */; };
+		401540212367236900598A2B /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540202367236900598A2B /* HexagonParameters.swift */; };
+		401540232367266A00598A2B /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540222367266A00598A2B /* Badge.swift */; };
 		40F33AB62361EC5D00BDF5AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */; };
 		40F33AB82361EC5D00BDF5AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */; };
 		40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB92361EC5D00BDF5AE /* ContentView.swift */; };
@@ -41,6 +44,9 @@
 		401540182366D48C00598A2B /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		4015401A2367131300598A2B /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tutor.xcassets; sourceTree = "<group>"; };
 		4015401C2367141A00598A2B /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
+		4015401E23671A8400598A2B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		401540202367236900598A2B /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		401540222367266A00598A2B /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		40F33AB22361EC5D00BDF5AE /* Keshia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keshia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				40F33ABB2361EC5F00BDF5AE /* Assets.xcassets */,
 				40F33AC02361EC5F00BDF5AE /* LaunchScreen.storyboard */,
 				40F33AC32361EC5F00BDF5AE /* Info.plist */,
+				4015401E23671A8400598A2B /* Home.swift */,
+				401540202367236900598A2B /* HexagonParameters.swift */,
+				401540222367266A00598A2B /* Badge.swift */,
 				40F33ABD2361EC5F00BDF5AE /* Preview Content */,
 			);
 			path = Keshia;
@@ -277,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401540212367236900598A2B /* HexagonParameters.swift in Sources */,
+				401540232367266A00598A2B /* Badge.swift in Sources */,
 				40F33AB62361EC5D00BDF5AE /* AppDelegate.swift in Sources */,
 				40F33AB82361EC5D00BDF5AE /* SceneDelegate.swift in Sources */,
 				401540192366D48C00598A2B /* PersonDetail.swift in Sources */,
+				4015401F23671A8400598A2B /* Home.swift in Sources */,
 				4015401D2367141A00598A2B /* PersonData.swift in Sources */,
 				40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */,
 			);
