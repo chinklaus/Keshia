@@ -23,13 +23,11 @@ struct ContentView: View {
 }
 
 
-#if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         ContentView(persons: testData)
     }
 }
-#endif
 
 struct PersonCell: View {
     let person: Person

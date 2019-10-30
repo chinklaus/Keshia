@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct PersonDetail: View {
     let person: Person
@@ -19,7 +20,9 @@ struct PersonDetail: View {
                 .aspectRatio(contentMode: zoomed ? .fill : .fit)
                 .navigationBarTitle(Text(person.name), displayMode: .inline)
                 .onTapGesture {
-                    withAnimation{ self.zoomed.toggle()}
+                    //withAnimation{ self.zoomed.toggle()}
+                    testCallApi()
+                    print("TEST")
                 }
             .frame(minWidth:0, maxWidth: .infinity)
             Image(systemName: "video.fill")
@@ -27,6 +30,24 @@ struct PersonDetail: View {
                 .padding(.all)
         }
     }
+    
+}
+
+func testCallApi() {
+    let apiUrl = URL(string: "http://10.5.3.202:8080/bi/test/test_get_200")!
+    var request = URLRequest(url: apiUrl)
+    request.httpMethod = "GET"
+    let task = URLSession.shared.dataTask(with: request) {
+        (data, response, error) in
+        if (error == nil) {
+            var backToString = String(data: data!, encoding: String.Encoding.utf8) as String?
+            print(backToString!)
+        }
+        
+    }
+    task.resume()
+    
+    //UIApplication.shared.open(apiU rl)
 }
 
 struct PersonDetail_Previews: PreviewProvider {
