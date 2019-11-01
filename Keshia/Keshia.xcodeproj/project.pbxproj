@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BE7FA0236B09E9005DE8D4 /* StaffCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7F9F236B09E9005DE8D4 /* StaffCode.swift */; };
+		07BE7FA2236B11CB005DE8D4 /* FlowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA1236B11CB005DE8D4 /* FlowService.swift */; };
+		07BE7FA5236B1290005DE8D4 /* PhonebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA4236B1290005DE8D4 /* PhonebookService.swift */; };
+		07BE7FA7236B12F4005DE8D4 /* PunchClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA6236B12F4005DE8D4 /* PunchClockService.swift */; };
+		07BE7FAA236B152A005DE8D4 /* DayOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA9236B152A005DE8D4 /* DayOff.swift */; };
+		07BE7FAC236B1A5C005DE8D4 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FAB236B1A5C005DE8D4 /* Keyword.swift */; };
 		401540192366D48C00598A2B /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540182366D48C00598A2B /* PersonDetail.swift */; };
 		4015401B2367131300598A2B /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4015401A2367131300598A2B /* Tutor.xcassets */; };
 		4015401D2367141A00598A2B /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015401C2367141A00598A2B /* PersonData.swift */; };
@@ -41,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07BE7F9F236B09E9005DE8D4 /* StaffCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffCode.swift; sourceTree = "<group>"; };
+		07BE7FA1236B11CB005DE8D4 /* FlowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowService.swift; sourceTree = "<group>"; };
+		07BE7FA4236B1290005DE8D4 /* PhonebookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookService.swift; sourceTree = "<group>"; };
+		07BE7FA6236B12F4005DE8D4 /* PunchClockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchClockService.swift; sourceTree = "<group>"; };
+		07BE7FA9236B152A005DE8D4 /* DayOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOff.swift; sourceTree = "<group>"; };
+		07BE7FAB236B1A5C005DE8D4 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		401540182366D48C00598A2B /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		4015401A2367131300598A2B /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tutor.xcassets; sourceTree = "<group>"; };
 		4015401C2367141A00598A2B /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
@@ -88,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07BE7FA3236B11DB005DE8D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				07BE7FA1236B11CB005DE8D4 /* FlowService.swift */,
+				07BE7FA4236B1290005DE8D4 /* PhonebookService.swift */,
+				07BE7FA6236B12F4005DE8D4 /* PunchClockService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		07BE7FA8236B1506005DE8D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07BE7F9F236B09E9005DE8D4 /* StaffCode.swift */,
+				07BE7FA9236B152A005DE8D4 /* DayOff.swift */,
+				07BE7FAB236B1A5C005DE8D4 /* Keyword.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		40F33AA92361EC5D00BDF5AE = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +143,8 @@
 		40F33AB42361EC5D00BDF5AE /* Keshia */ = {
 			isa = PBXGroup;
 			children = (
+				07BE7FA8236B1506005DE8D4 /* Models */,
+				07BE7FA3236B11DB005DE8D4 /* Service */,
 				4015401A2367131300598A2B /* Tutor.xcassets */,
 				40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */,
 				40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */,
@@ -289,11 +323,17 @@
 				401540212367236900598A2B /* HexagonParameters.swift in Sources */,
 				401540232367266A00598A2B /* Badge.swift in Sources */,
 				40F33AB62361EC5D00BDF5AE /* AppDelegate.swift in Sources */,
+				07BE7FA2236B11CB005DE8D4 /* FlowService.swift in Sources */,
 				40F33AB82361EC5D00BDF5AE /* SceneDelegate.swift in Sources */,
 				401540192366D48C00598A2B /* PersonDetail.swift in Sources */,
 				4015401F23671A8400598A2B /* Home.swift in Sources */,
+				07BE7FAC236B1A5C005DE8D4 /* Keyword.swift in Sources */,
 				4015401D2367141A00598A2B /* PersonData.swift in Sources */,
+				07BE7FA5236B1290005DE8D4 /* PhonebookService.swift in Sources */,
+				07BE7FA7236B12F4005DE8D4 /* PunchClockService.swift in Sources */,
+				07BE7FA0236B09E9005DE8D4 /* StaffCode.swift in Sources */,
 				40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */,
+				07BE7FAA236B152A005DE8D4 /* DayOff.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
