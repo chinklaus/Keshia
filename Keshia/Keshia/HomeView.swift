@@ -11,6 +11,7 @@ import Speech
 
 struct HomeView: View {
     var persons: [Person] = []
+    @State private var name:String = ""
     
     var body: some View {
         ZStack
@@ -20,19 +21,27 @@ struct HomeView: View {
                 center: .center, startRadius: 2, endRadius: 650)
             .edgesIgnoringSafeArea(.all)
     VStack {
-        Text("Keshia")
-            .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
-            .foregroundColor(.white)
-        HStack {
-            Text("Your Assistant")
-                .font(.subheadline)
+        Spacer()
+        VStack {
+            Text("Keshia")
+                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
                 .foregroundColor(.white)
-            Text("Taipei")
-                .font(.subheadline)
-                .foregroundColor(.white)
-        }
-        .accessibility(label: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Text Label@*/Text("")/*@END_MENU_TOKEN@*/)
-         .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+            HStack {
+                Text("Your Assistant")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                Text("Taipei")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+            }
+            TextField("告訴我你想幹嘛", text: $name,
+                onEditingChanged:{(editing) in print("onEditingChanged", editing)},
+                onCommit: {() in print("onCommit")}
+            )
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding(20)
+            }
+        Spacer()
         Button(action: {
             print("Say some shit")
         }) {
@@ -42,6 +51,7 @@ struct HomeView: View {
             
         }
         .buttonStyle(GradientBackgroundStyle())
+        .padding()
       }
     }
   }
@@ -51,7 +61,7 @@ struct GradientBackgroundStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-           .padding(100)
+           .padding(50)
            .background(
                RadialGradient(gradient: Gradient(colors:
                         [.black, Color("HomeMainColor")]),
