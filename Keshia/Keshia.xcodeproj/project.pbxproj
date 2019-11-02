@@ -19,6 +19,7 @@
 		4015401F23671A8400598A2B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015401E23671A8400598A2B /* Home.swift */; };
 		401540212367236900598A2B /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540202367236900598A2B /* HexagonParameters.swift */; };
 		401540232367266A00598A2B /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401540222367266A00598A2B /* Badge.swift */; };
+		406A726B236D17C4008743CD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406A726A236D17C4008743CD /* CircleImage.swift */; };
 		40F33AB62361EC5D00BDF5AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */; };
 		40F33AB82361EC5D00BDF5AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */; };
 		40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F33AB92361EC5D00BDF5AE /* ContentView.swift */; };
@@ -59,6 +60,7 @@
 		4015401E23671A8400598A2B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		401540202367236900598A2B /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		401540222367266A00598A2B /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		406A726A236D17C4008743CD /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		40F33AB22361EC5D00BDF5AE /* Keshia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keshia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,13 +149,14 @@
 				07BE7FA3236B11DB005DE8D4 /* Service */,
 				4015401A2367131300598A2B /* Tutor.xcassets */,
 				40F33AB52361EC5D00BDF5AE /* AppDelegate.swift */,
+				406A726A236D17C4008743CD /* CircleImage.swift */,
 				40F33AB72361EC5D00BDF5AE /* SceneDelegate.swift */,
 				40F33AB92361EC5D00BDF5AE /* ContentView.swift */,
 				401540182366D48C00598A2B /* PersonDetail.swift */,
 				4015401C2367141A00598A2B /* PersonData.swift */,
 				40F33ABB2361EC5F00BDF5AE /* Assets.xcassets */,
-				40F33AC02361EC5F00BDF5AE /* LaunchScreen.storyboard */,
 				40F33AC32361EC5F00BDF5AE /* Info.plist */,
+				40F33AC02361EC5F00BDF5AE /* LaunchScreen.storyboard */,
 				4015401E23671A8400598A2B /* Home.swift */,
 				401540202367236900598A2B /* HexagonParameters.swift */,
 				401540222367266A00598A2B /* Badge.swift */,
@@ -334,6 +337,7 @@
 				07BE7FA0236B09E9005DE8D4 /* StaffCode.swift in Sources */,
 				40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */,
 				07BE7FAA236B152A005DE8D4 /* DayOff.swift in Sources */,
+				406A726B236D17C4008743CD /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
