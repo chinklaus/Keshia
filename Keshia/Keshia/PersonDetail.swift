@@ -22,9 +22,17 @@ struct PersonDetail: View {
                 .onTapGesture {
                     //withAnimation{ self.zoomed.toggle()}
                     //testCallApi()
-                    let flowService = FlowService(ip: "10.107.14.59")
+                    let flowService = FlowService(ip: "10.107.14.6")
                     flowService.queryDayOffType()
-                    print("TEST")
+                    print("=====================")
+                    let elasticSearchService = ElasticSearchService(ip: "10.107.83.17")
+                    //let cotent = "我想要請假"
+                    
+                    let matchObject = match(ITEM_CONTENT: "我想要請假")
+                    let queryObject = query(match: matchObject)
+                    let elasticSearch = ElasticSearch(query: queryObject)
+                    
+                    elasticSearchService.post(elasticSearch)
                 }
             .frame(minWidth:0, maxWidth: .infinity)
             Image(systemName: "video.fill")
