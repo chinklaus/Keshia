@@ -5,6 +5,7 @@ import HomeView from '../screen/HomeView';
 import employeeView from '../screen/employeeView';
 import queryPunchClock from '../screen/queryPunchClock';
 import createDayOff from '../screen/createDayOff';
+import webview from '../screen/webview';
 
 const MainStack = createStackNavigator({
     HomeScreen: {
@@ -30,8 +31,11 @@ const MainStack = createStackNavigator({
     navigationOptions: {
       header: null
     }
-  }
-  
+  },
+  webviewScreen: {
+  screen: webview,
+}
+
 });
 
 const AppStackNavigator = createStackNavigator(

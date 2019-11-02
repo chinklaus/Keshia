@@ -28,6 +28,10 @@ class HomeView extends React.Component {
     };
   }
 
+  static navigationOptions = ({ navigation }) => ({
+    headerBackTitle: 'Keshia'
+  });
+  
   getRequestType() {
       this.setState({       
           loading: true,
@@ -46,7 +50,7 @@ class HomeView extends React.Component {
             requestType: res.data.hits.hits[0]._source.ITEM_URL
           })
         let requestType = res.data.hits.hits[0]._source.ITEM_URL
-
+        
         if (requestType == 'queryUser') {
           return (
             this.props.navigation.navigate('employeeScreen')
@@ -60,9 +64,16 @@ class HomeView extends React.Component {
           return (
             this.props.navigation.navigate('queryPunchClockScreen')
           )
-        }
-        else if (requestType == 'createDayOffDetail'){
+        } else if (requestType == 'createDayOffDetail'){
           this.props.navigation.navigate('createDayOffScreen')
+        } else if (requestType.substring(0, 4) === 'http') {
+          // console.log("TCL: HomeView -> getRequestType -> http 999", requestType)
+          this.props.navigation.navigate('webviewScreen', {
+            'webviewUrl': requestType
+          })
+        }
+        else{
+          Alert.alert('抱歉，Keshia 不懂你在說什麼，請在說說別的');
         }
           
       }).catch(error => {
