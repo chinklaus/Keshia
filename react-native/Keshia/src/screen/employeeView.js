@@ -8,12 +8,11 @@
 import React from 'react';
 import axios from 'axios';
 import {
-  SafeAreaView,
   StyleSheet,
   Image,
   View,
   Text,
-  TextInput,
+  SafeAreaView,
   TouchableOpacity
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -38,7 +37,7 @@ class employeeView extends React.Component {
     }).then(res => {
       console.log("TCL: HomeView -> getRequestTyoe -> res", res);
       this.setState({
-        queryUserData: res.data
+        queryUserData: res.data.list[0]
       })
     }).catch(error => {
       this.setState({
@@ -57,15 +56,34 @@ class employeeView extends React.Component {
     });
   }
 
+  componentDidMount() {
+    this.getEmployee();
+  }
+
 
   render() {
     return (
       <LinearGradient colors={['#4c669f', '#3b5998', '#999']} style={{ flex: 1, }}>
-        <View style={styles.mainView}>
-          <View style={styles.sectionTextView}>
-            <Text style={styles.sectionTitle}>Staff</Text>
+        <SafeAreaView style={styles.mainView}>
+          <View style={styles.headerView}>
+            <TouchableOpacity style={{ paddingLeft: 12 }} onPress={() => this.props.navigation.pop()}>
+              <Text style={styles.headerBackText}>Back</Text>
+            </TouchableOpacity>
           </View>
-        </View>
+          <View style={styles.detailView}>
+            <Text style={styles.sectionTitle}>員工</Text>
+            <Text style={[styles.detailTitleText, { marginBottom: 12 }]}>{this.state.queryUserData.staffCode}</Text>
+            <View style={{ flexDirection: 'row', marginBottom: 12}}>
+              <Text style={styles.detailTitleText}>{this.state.queryUserData.displayName}</Text>
+            </View>
+            <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+              <Text style={styles.detailTitleText}>{this.state.queryUserData.email}</Text>
+            </View>
+            <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+              <Text style={styles.detailTitleText}>{this.state.queryUserData.mobile}</Text>
+            </View>
+          </View>
+        </SafeAreaView>
       </LinearGradient>
     );
   }
@@ -74,31 +92,33 @@ class employeeView extends React.Component {
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
   },
   sectionTextView: {
     justifyContent: 'center'
+  },
+  headerView:{
+    flexDirection: 'row',
+  },
+  headerBackText:{
+    fontSize: 17,
+    color:'#fff'
   },
   sectionTitle: {
     fontSize: 40,
     fontWeight: '600',
     color: "#fff",
-    textAlign: 'center',
+    marginBottom:24,
+    textAlign: 'left',
   },
-  sectionSubTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: "#fff",
-    textAlign: 'center',
+  detailView:{
+    marginTop:36,
+    paddingHorizontal: 15,
   },
-  micButton: {
-    width: 100,
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    borderRadius: 50,
-    backgroundColor: '#fff'
+  detailTitleText:{
+    fontSize: 20,
+    color:'#fff',
+    marginRight: 12,
   },
 });
 

@@ -28,11 +28,11 @@ class HomeView extends React.Component {
     };
   }
 
-  getRequestTyoe() {
+  getRequestType() {
       this.setState({       
           loading: true,
       });
-    console.log('getRequestTyoe onSubmitEditing')  
+    console.log('getRequestType onSubmitEditing')  
     axios.post('http://10.107.83.17:9200/_search', {
         min_score: 1,
         query: {
@@ -41,13 +41,13 @@ class HomeView extends React.Component {
           }
         }
       }).then(res => {
-          console.log("TCL: HomeView -> getRequestTyoe -> res", res);
+        console.log("TCL: HomeView -> getRequestType -> res", res);
           this.setState({
             requestType: res.data.hits.hits[0]._source.ITEM_URL
           })
-        let requestTyp = res.data.hits.hits[0]._source.ITEM_URL
+        let requestType = res.data.hits.hits[0]._source.ITEM_URL
 
-        if (requestTyp == 'queryUser') {
+        if (requestType == 'queryUser') {
           return (
             this.props.navigation.navigate('employeeScreen')
             // userRequest.post('/phonebook/queryUser', {
@@ -56,6 +56,13 @@ class HomeView extends React.Component {
             //   console.log("TCL: HomeView -> getRequestTyoe -> res", res)
             // })
           )
+        } else if (requestType == 'queryPunchClock'){
+          return (
+            this.props.navigation.navigate('queryPunchClockScreen')
+          )
+        }
+        else if (requestType == 'createDayOffDetail'){
+          this.props.navigation.navigate('createDayOffScreen')
         }
           
       }).catch(error => {
@@ -102,7 +109,7 @@ class HomeView extends React.Component {
           onChangeText={text =>
             this.setState({ userRequestText: text })
           }
-          onSubmitEditing={() => this.getRequestTyoe() }
+          onSubmitEditing={() => this.getRequestType() }
         />
         <TouchableOpacity style={styles.micButton}>
           <Image
