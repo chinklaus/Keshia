@@ -23,16 +23,32 @@ struct PersonDetail: View {
                     //withAnimation{ self.zoomed.toggle()}
                     //testCallApi()
                     let flowService = FlowService(ip: "10.107.14.6")
-                    flowService.queryDayOffType()
+                    //flowService.queryDayOffType()
                     print("=====================")
                     let elasticSearchService = ElasticSearchService(ip: "10.107.83.17")
                     //let cotent = "我想要請假"
                     
                     let matchObject = match(ITEM_CONTENT: "我想要請假")
                     let queryObject = query(match: matchObject)
-                    let elasticSearch = ElasticSearch(query: queryObject)
-                    
-                    elasticSearchService.post(elasticSearch)
+                    let elasticSearch = ElasticSearch(min_score: 1, query: queryObject)
+                    let completion = { (result: String) in
+                        print(result)
+                        switch result {
+                        case "createDayOffDetail":
+                            print("Create Day Off")
+                        case "queryUser":
+                            print("Query User")
+                        case "queryPunchClock":
+                            print("Query Punch Clock")
+                        default:
+                            print("Fail")
+                        }
+                        
+                         }
+                    //var currentFunc = "DETAIL"
+                    elasticSearchService.search(elasticSearch, completionHandler: completion)
+                    //print("+++++")
+                    //print(currentFunc)
                 }
             .frame(minWidth:0, maxWidth: .infinity)
             Image(systemName: "video.fill")

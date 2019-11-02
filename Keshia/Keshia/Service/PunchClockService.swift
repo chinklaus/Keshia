@@ -16,7 +16,7 @@ struct PunchClockService {
         self.resourceURL = resourceString
     }
     
-    func post (_ staffCode: StaffCode) {
+    func queryPunchClock (_ staffCode: StaffCode) {
         let url = URL(string: resourceURL + "queryPunchClock")!
         do {
             var postRequest = URLRequest(url: url)

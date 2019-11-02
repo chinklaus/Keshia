@@ -8,8 +8,11 @@
 
 import Foundation
 final class ElasticSearch: Codable{
+    var min_score: Int
     var query: query
-    init(query: query) {
+
+    init(min_score: Int, query: query){
+        self.min_score = min_score
         self.query = query
     }
 }
