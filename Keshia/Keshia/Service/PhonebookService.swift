@@ -16,7 +16,7 @@ struct PhonebookService {
         self.resourceURL = resourceString
     }
     
-    func queryUser (_ keyWord: Keyword) {
+    func queryUser (_ keyWord: Keyword, completionHandler: @escaping () -> ()) {
         let url = URL(string: resourceURL + "queryUser")!
         do {
             var postRequest = URLRequest(url: url)

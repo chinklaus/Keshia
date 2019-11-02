@@ -11,6 +11,9 @@
 		07B3B514236D1D0F000D9747 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B513236D1D0F000D9747 /* Query.swift */; };
 		07B3B516236D1D2A000D9747 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B515236D1D2A000D9747 /* Match.swift */; };
 		07B3B51A236D2896000D9747 /* ElasticSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B519236D2896000D9747 /* ElasticSearch.swift */; };
+		07B3B51C236D4D5D000D9747 /* Analyze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B51B236D4D5D000D9747 /* Analyze.swift */; };
+		07B3B520236D5322000D9747 /* EmployeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B51F236D5322000D9747 /* EmployeeList.swift */; };
+		07B3B522236D5370000D9747 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B521236D5370000D9747 /* Employee.swift */; };
 		07BE7FA0236B09E9005DE8D4 /* StaffCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7F9F236B09E9005DE8D4 /* StaffCode.swift */; };
 		07BE7FA2236B11CB005DE8D4 /* FlowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA1236B11CB005DE8D4 /* FlowService.swift */; };
 		07BE7FA5236B1290005DE8D4 /* PhonebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE7FA4236B1290005DE8D4 /* PhonebookService.swift */; };
@@ -57,6 +60,9 @@
 		07B3B513236D1D0F000D9747 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		07B3B515236D1D2A000D9747 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		07B3B519236D2896000D9747 /* ElasticSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticSearch.swift; sourceTree = "<group>"; };
+		07B3B51B236D4D5D000D9747 /* Analyze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyze.swift; sourceTree = "<group>"; };
+		07B3B51F236D5322000D9747 /* EmployeeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeList.swift; sourceTree = "<group>"; };
+		07B3B521236D5370000D9747 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		07BE7F9F236B09E9005DE8D4 /* StaffCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffCode.swift; sourceTree = "<group>"; };
 		07BE7FA1236B11CB005DE8D4 /* FlowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowService.swift; sourceTree = "<group>"; };
 		07BE7FA4236B1290005DE8D4 /* PhonebookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookService.swift; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 				07B3B513236D1D0F000D9747 /* Query.swift */,
 				07B3B515236D1D2A000D9747 /* Match.swift */,
 				07B3B519236D2896000D9747 /* ElasticSearch.swift */,
+				07B3B51B236D4D5D000D9747 /* Analyze.swift */,
+				07B3B521236D5370000D9747 /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 				401540202367236900598A2B /* HexagonParameters.swift */,
 				401540222367266A00598A2B /* Badge.swift */,
 				40F33ABD2361EC5F00BDF5AE /* Preview Content */,
+				07B3B51F236D5322000D9747 /* EmployeeList.swift */,
 			);
 			path = Keshia;
 			sourceTree = "<group>";
@@ -338,8 +347,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B3B520236D5322000D9747 /* EmployeeList.swift in Sources */,
 				401540212367236900598A2B /* HexagonParameters.swift in Sources */,
 				07B3B512236D1978000D9747 /* ElasticSearchService.swift in Sources */,
+				07B3B522236D5370000D9747 /* Employee.swift in Sources */,
 				401540232367266A00598A2B /* Badge.swift in Sources */,
 				40F33AB62361EC5D00BDF5AE /* AppDelegate.swift in Sources */,
 				07BE7FA2236B11CB005DE8D4 /* FlowService.swift in Sources */,
@@ -355,6 +366,7 @@
 				07BE7FA7236B12F4005DE8D4 /* PunchClockService.swift in Sources */,
 				07B3B514236D1D0F000D9747 /* Query.swift in Sources */,
 				07BE7FA0236B09E9005DE8D4 /* StaffCode.swift in Sources */,
+				07B3B51C236D4D5D000D9747 /* Analyze.swift in Sources */,
 				40F33ABA2361EC5D00BDF5AE /* ContentView.swift in Sources */,
 				07BE7FAA236B152A005DE8D4 /* DayOff.swift in Sources */,
 				406A726B236D17C4008743CD /* CircleImage.swift in Sources */,
