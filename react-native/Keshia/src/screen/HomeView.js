@@ -84,7 +84,7 @@ class HomeView extends React.Component {
 
   render() {
   return (     
-    <LinearGradient colors={['#4c669f', '#3b5998', '#999']} style={{ flex: 1, }}>
+    <LinearGradient colors={['#999', '#3b5998', '#4c669f']} style={{ flex: 1, }}>
       <View style={styles.mainView}>
         <View style={styles.sectionTextView}>
           <Text style={styles.sectionTitle}>Keshia</Text>
@@ -97,7 +97,7 @@ class HomeView extends React.Component {
             color: '#fff',
             marginLeft: 'auto',
             marginRight: 'auto',
-            borderColor: 'gray',
+            borderColor: '#999',
             borderBottomWidth: 1
           }}
           placeholder={'想做什麼呢'}
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     borderRadius: 50,
-    backgroundColor:'#fff'
+    backgroundColor:'rgba(255, 255, 255, 1);'
   },
 });
 

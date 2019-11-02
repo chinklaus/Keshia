@@ -16,7 +16,6 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* KeshiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KeshiaTests.m */; };
-		40594D36236D85DA004878DD /* libVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40594D35236D85B7004878DD /* libVoice.a */; };
 		BF5C0A0F8008F55ED40AD33D /* libPods-Keshia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D130467194A5548CE3637B /* libPods-Keshia.a */; };
 		DC92C20A6CE8F461B015430B /* libPods-Keshia-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB8B8A560CD86FFFBC9ECD0 /* libPods-Keshia-tvOS.a */; };
 		DF28CA08B7881D5EAA101C4F /* libPods-KeshiaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C238FD8A0DFD840571A0EB3E /* libPods-KeshiaTests.a */; };
@@ -52,13 +51,6 @@
 			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
 			remoteInfo = "RNSVG-tvOS";
 		};
-		40594D34236D85B7004878DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 40594D2E236D85B7004878DD /* Voice.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC0729B51EF78E41004EBC83;
-			remoteInfo = Voice;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +73,6 @@
 		2D02E4901E0B4A5D006451C7 /* Keshia-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Keshia-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D073A33A2805A27C767404D /* Pods-Keshia-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keshia-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Keshia-tvOS/Pods-Keshia-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		40594D19236D7DC5004878DD /* RNSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
-		40594D2E236D85B7004878DD /* Voice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Voice.xcodeproj; path = "../node_modules/react-native-voice/ios/Voice.xcodeproj"; sourceTree = "<group>"; };
 		408DD44D9F7F291D3DE9EE11 /* Pods-Keshia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keshia.debug.xcconfig"; path = "Target Support Files/Pods-Keshia/Pods-Keshia.debug.xcconfig"; sourceTree = "<group>"; };
 		5AB8B8A560CD86FFFBC9ECD0 /* libPods-Keshia-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Keshia-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60CDBF9B6CEBF6275618FCE4 /* Pods-KeshiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeshiaTests.release.xcconfig"; path = "Target Support Files/Pods-KeshiaTests/Pods-KeshiaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +98,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5C0A0F8008F55ED40AD33D /* libPods-Keshia.a in Frameworks */,
-				40594D36236D85DA004878DD /* libVoice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,18 +173,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40594D2F236D85B7004878DD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				40594D35236D85B7004878DD /* libVoice.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				40594D2E236D85B7004878DD /* Voice.xcodeproj */,
 				40594D19236D7DC5004878DD /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
@@ -363,10 +344,6 @@
 					ProductGroup = 40594D1A236D7DC5004878DD /* Products */;
 					ProjectRef = 40594D19236D7DC5004878DD /* RNSVG.xcodeproj */;
 				},
-				{
-					ProductGroup = 40594D2F236D85B7004878DD /* Products */;
-					ProjectRef = 40594D2E236D85B7004878DD /* Voice.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -391,13 +368,6 @@
 			fileType = archive.ar;
 			path = "libRNSVG-tvOS.a";
 			remoteRef = 40594D20236D7DC5004878DD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		40594D35236D85B7004878DD /* libVoice.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVoice.a;
-			remoteRef = 40594D34236D85B7004878DD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
