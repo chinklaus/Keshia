@@ -11,9 +11,11 @@ import Speech
 
 struct HomeView: View {
     var persons: [Person] = []
-    @State private var name:String = ""
-    
+    @State private var userRequest = ""
+
     var body: some View {
+        NavigationView {
+
         ZStack
            {
               RadialGradient(gradient: Gradient(colors:
@@ -34,9 +36,33 @@ struct HomeView: View {
                     .font(.subheadline)
                     .foregroundColor(.white)
             }
-            TextField("告訴我你想幹嘛", text: $name,
+            TextField("告訴我你想幹嘛", text: $userRequest,
                 onEditingChanged:{(editing) in print("onEditingChanged", editing)},
-                onCommit: {() in print("onCommit")}
+                onCommit: {()
+                    let elasticSearchService = ElasticSearchService(ip: "10.107.83.17")
+                         //let cotent = "我想要請假"
+                         let matchObject = match(ITEM_CONTENT: self.userRequest )
+                         let queryObject = query(match: matchObject)
+                         let elasticSearch = ElasticSearch(min_score: 1, query: queryObject)
+                         let completion = { (result: String) in
+                             print(result)
+                             switch result {
+                             case "createDayOffDetail":
+                                 print("Create Day Off")
+                             case "queryUser":
+                                 print("Query User")
+                             case "queryPunchClock":
+                                 print("Query Punch Clock")
+                             default:
+                                 print("Fail")
+                             }
+                             
+                              }
+                         //var currentFunc = "DETAIL"
+                         elasticSearchService.search(elasticSearch, completionHandler: completion)
+                         print("+++++")
+                         //print(currentFunc)
+                }
             )
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(20)
@@ -52,11 +78,12 @@ struct HomeView: View {
         }
         .buttonStyle(GradientBackgroundStyle())
         .padding()
+        }
       }
     }
   }
 }
-
+ 
 struct GradientBackgroundStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
