@@ -21,7 +21,10 @@ import { userRequest, userRequestType } from '@services/api';
 class employeeView extends React.Component {
   constructor(props, context) {
     super(props, context);
+    let staffCode = this.props.navigation.getParam('staffCode');
+    console.log("TCL: employeeView -> constructor -> staffCode", staffCode)
     this.state = {
+      fromHomeQueryStaffCode: staffCode,
       queryUserData: '',
       loading: false,
     };
@@ -33,12 +36,14 @@ class employeeView extends React.Component {
     });
     console.log('getEmployee ')
     axios.post('http://10.107.14.6:8180/bi/phonebook/queryUser', {
-      keyWord: "119831"
+      keyWord: this.state.fromHomeQueryStaffCode
     }).then(res => {
-      console.log("TCL: HomeView -> getRequestTyoe -> res", res);
-      this.setState({
-        queryUserData: res.data.list[0]
-      })
+      console.log('In employee view' + res.data.list.length);
+      if (res.data.list.length > 0) {
+        this.setState({
+          queryUserData: res.data.list[0]
+        })
+      }
     }).catch(error => {
       this.setState({
         loading: false,
@@ -61,7 +66,8 @@ class employeeView extends React.Component {
   }
 
 
-  render() {
+  render() { 
+
     return (
       <LinearGradient colors={['#4c669f', '#3b5998', '#999']} style={{ flex: 1, }}>
         <SafeAreaView style={styles.mainView}>
@@ -72,6 +78,8 @@ class employeeView extends React.Component {
           </View>
           <View style={styles.detailView}>
             <Text style={styles.sectionTitle}>員工</Text>
+            {this.state.queryUserData ? 
+            <React.Fragment>
             <Text style={[styles.detailTitleText, { marginBottom: 12 }]}>{this.state.queryUserData.staffCode}</Text>
             <View style={{ flexDirection: 'row', marginBottom: 12}}>
               <Text style={styles.detailTitleText}>{this.state.queryUserData.displayName}</Text>
@@ -81,7 +89,10 @@ class employeeView extends React.Component {
             </View>
             <View style={{ flexDirection: 'row', marginBottom: 12 }}>
               <Text style={styles.detailTitleText}>{this.state.queryUserData.mobile}</Text>
-            </View>
+            </View> 
+              </React.Fragment>
+              : <Text style={styles.detailTitleText}>暫無查詢結果</Text> 
+             }
           </View>
         </SafeAreaView>
       </LinearGradient>
